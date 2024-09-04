@@ -7,5 +7,17 @@
 </head>
 <body>
     <h1> Seja bem-vindo <h1>
+
+    <p>Agora são {{ now }}</p>
+
+    <ul>
+        {% for transacao in transacoes %}
+            {% if transacao == "t2" %}
+                <li>{{ transacao }}</li>
+            {% else %}
+                <li><b>{{ transacao }}</b></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 </body>
 </html>
